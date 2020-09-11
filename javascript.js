@@ -68,3 +68,16 @@ function mudarIcone(){
     else{icone.src = "iconeFechar.png"}
 }
 
+/*-----------------------------------SETA IMAGEM PRO MODAL AO CLICAR--------------------------------------------------------------------------------------------------------*/
+var imagemModal = document.querySelector('#imagemModal')
+var modal = document.querySelector('.modal')
+var imagensDaGaleria = document.querySelectorAll('.fotosDaGaleria')
+imagensDaGaleria.forEach(imagem => {imagem.addEventListener('click', setarModal)})
+function setarModal(){
+    imagemModal.src = this.src
+    modal.style.display = 'flex'
+}
+
+function fecharModal(){
+    modal.style.display = 'none'
+}
