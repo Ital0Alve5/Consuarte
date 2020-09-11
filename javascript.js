@@ -43,4 +43,20 @@ function ScrollToId(event){ //O parâmetro nos mostra que houve um evento de mou
     //com o top sendo igual ao valor que foi retornado pelo offsetTop da localização do elemento menos 50 píxels. O behavior smooth é para a rolagem ser suave.
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------MUDA A LOGO PARA A VERSÃO MOBILE--------------------------------------------------------------------------------------------------------*/
+ window.onresize = function(){MudarLogo()}
+ window.onload = function(){MudarLogo()}
+ function MudarLogo(){
+     if(window.innerWidth < 700){
+         document.getElementById('logo').src = 'logo1.png'
+     }
+     else{document.getElementById('logo').src = 'logo.png'}
+ }
+/*-----------------------------------MUDA O ÍCONE DO MENU AO ABRIR E AO FECHAR--------------------------------------------------------------------------------------------------------*/
+
+ function mudarIcone(){var menu = document.getElementById('barraMenu')
+ var icone = document.getElementById('icone')
+if(menu.checked){
+icone.src = "iconeMenu.png"
+}
+else(icone.src = "iconeFechar.png")}
