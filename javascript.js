@@ -81,3 +81,34 @@ function setarModal(){
 function fecharModal(){
     modal.style.display = 'none'
 }
+
+/*---------------------------------------PASSA PARA A PRÓXIMA IMAGEM AO CLICAR NOS BOTÕES VIRTUAIS E DO TECLADO--------------------------------------------------------------------------------------------------------*/
+
+var fotosDaGaleria = ['galeria/galeria1.jpg', 'galeria/galeria2.jpg', 'galeria/galeria3.jpg', 'galeria/galeria4.jpg', 'galeria/galeria5.jpg'
+, 'galeria/galeria6.jpg', 'galeria/galeria7.jpg', 'galeria/galeria8.jpg', 'galeria/galeria9.jpg', 'galeria/galeria10.jpg', 'galeria/galeria11.jpg', 'galeria/galeria12.jpg'
+, 'galeria/galeria13.jpg', 'galeria/galeria14.jpg', 'galeria/galeria15.jpg', 'galeria/galeria16.jpg']
+//Colocar todas os endereços das fotos num array
+var botões = document.querySelectorAll('.botões') //
+imagensDaGaleria.forEach(foto => {foto.addEventListener('click', qualFoto)}) //para cada foto clicada, chamar a funçao "qualFoto"
+botões.forEach(botão => {botão.addEventListener('click', next)}) //para cada botão virtual clicado, chamar a função "next"
+window.onkeydown = next //para cada tecla pressionada, chamar a função next
+var indice; //declaração da variável global "indice"
+function qualFoto(){ 
+    source = this.getAttribute('src') //esta função puxa a src específica da foto que foi clicada
+    indice = fotosDaGaleria.indexOf(source) //E procura o índice da src no array, retornando seu valor
+    }
+
+function next(e){
+    if(this.id =='botãoDaDireita' || e.which == 39){ //Se o id do botão pressionado for o da direita ou se o código da tecla pressionada for o 39 (seta direita), executar
+        ++indice // somar um ao índice
+        if(indice <= 15){document.querySelector('#imagemModal').src = fotosDaGaleria[indice]} //se o índice for menor ou igual à 15, que é a última foto, pegar a source da foto com este índice e passar pro modal
+        else{indice = 0; document.querySelector('#imagemModal').src = fotosDaGaleria[indice]} //se passar de 15, setar o índice para 0 para que haja um looping e voltando para a foto inicial
+    }
+    else if(e.which == 37 || this.id =='botãoDaEsquerda'){--indice //se a tecla pressionada for a seta da esquerda ou o botão da esquerda diminuir 1 do índice
+        if(indice >= 0){ //se o índice for maior ou igual à 0, os índices vão diminuindo e as fotos voltam
+        document.querySelector('#imagemModal').src = fotosDaGaleria[indice]}
+        else{indice = 15 //caso contrário, o índice é setado para 15 que é a última foto, criando um looping também
+        document.querySelector('#imagemModal').src = fotosDaGaleria[indice]}
+        }
+}
+
