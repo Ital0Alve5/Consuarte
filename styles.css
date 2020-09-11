@@ -152,7 +152,7 @@ margin-top: 20px; margin-right: }
 
 
 
-.fotosDaGaleria{width: 100%; height: 100%; margin: 20px; transition: all linear 0.2s;
+.fotosDaGaleria{width: 90%; height: 100%; margin: 20px; transition: all linear 0.2s;
 cursor: pointer;}
 
 #imagemModal{max-width: 100vw; max-height: 100vh;}
