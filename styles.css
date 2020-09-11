@@ -4,7 +4,7 @@
 label{display: none;}
 input{display: none;}
 #ConsuArte{display: none}
-
+#navegação{background-color: cadetblue; position: absolute; width: 100%}
 .items{background-color: ; display: flex; justify-content: space-around;
 align-items: center; font-size: larger; height: 105px;}
 
@@ -15,8 +15,7 @@ display: flex; justify-content: center; align-items: center;}
 
 #logo{background-color: ; float: left; width: 150px; margin-left: 50px;}
 
-.barraFixa{position: absolute; background-color: rgba(241, 241, 241, 0.932); display: flex; width: 100%; height: 50px; display: none;
-}
+.barraFixa{position: absolute; background-color: rgba(241, 241, 241, 0.932); display: flex; width: 100%; height: 50px; display: none;}
 
 #navegação{display: block;}
 
@@ -29,10 +28,19 @@ display: flex; justify-content: center; align-items: center;}
 
 /*---------------------------------------SOBRE NÓS---------------------------------------------*/
 
-#Sobrenos{height: 100vh; width: 100%; background-color: lightblue;}
-#SobrenosTítulo{width: 100%; display: flex; justify-content: center; align-items: center; font-size: 180%;}
+#Sobrenos{height: 150vh; width: 100%; background-color: lightblue;}
+
+#SobrenosTítulo{width: 100%; height: 100px; display: flex; justify-content: center; align-items: center; font-size: 180%;}
+
 .divisória{width: 20%; display: inline-block;background-color: black; margin: 0 10px 0 10px; height: 1px; border-color: black;}
 
+#ConteinerSobreNós{background-color: ; display: flex; flex-direction: row; flex-wrap: wrap;
+width: 100%; font-size: larger; justify-content: space-around; align-items: center;}
+
+.imagemSobreNós{width: 450px; background-color: ; margin-top: 20px;}
+
+.parágrafo{background-color: ; width: 50%; display: flex; flex-direction: column;
+margin-top: 20px; margin-right: }
 
 /*##################################    VERSÃO MOBILE     #############################################3*/
 
@@ -41,6 +49,7 @@ display: flex; justify-content: center; align-items: center;}
 /*---------------------------------------MENU---------------------------------------------*/
 
 .barraFixa{display: none}
+
 #menu{background-color:; display: block; position: absolute;}
 
 .items{width: 100vw; background-color:; display: flex;
@@ -51,31 +60,27 @@ height: 250px; position: fixed; top: -250px; transition: all .3s;}
 justify-content: center; align-items: center; align-content: space-around;
 font-size: 17px; z-index: 2;}
 
-#barraMenu:checked ~ .items{
-    transform: translateY(250px);
-}
+#barraMenu:checked ~ .items{transform: translateY(250px);}
+
 .item:hover{background-color: rgb(211, 211, 211); border-radius: 0px;}
+
 #icone{width: 25px; background-color: ;}
 
 input[type="checkbox"]{display: none;}
 
-label{z-index: 3;
-    background-color: ;
-    padding: 10px;
-    margin: 2px 0 0 10px;
-    position: fixed;
-    display: block;
-    top: 0;
-    right: 5%;
-}
+label{z-index: 3; background-color: ; padding: 10px; margin: 2px 0 0 10px; position: fixed;
+display: block; top: 0; right: 5%;}
+
 label:hover{background-color: rgba(240, 240, 240, 0.356); cursor: pointer; border-radius: 8px;}
 
 /*---------------------------------HEADER---------------------------------------------------*/
 
 header{background-color: rgba(161, 241, 179, 0.918); width: 100vw; height:50px;
 display: flex; position: fixed; justify-content: center; align-items: center; overflow: hidden;}
+
 #logo{width: 50px; display: flex; margin-left: 20vw;}
-#ConsuArte{display: flex; font-size: 150%; color: teal; margin: 0 65vw 0 -7px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+#ConsuArte{display: flex; font-size: 150%; color: teal; margin: 0 65vw 0 -7px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
 
 /*------------------------8,----------INÍCIO--------------------------------------------------*/
 
@@ -84,8 +89,16 @@ display: flex; position: fixed; justify-content: center; align-items: center; ov
 
 
 /*---------------------------------------SOBRE NÓS---------------------------------------------*/
+#Sobrenos{height: 250vh; width: 100%; background-color: lightblue;}
 
-
+#ConteinerSobreNós{background-color: ; display: flex; flex-direction: row; flex-wrap: wrap;
+width: 100%; font-size: larger; justify-content: space-around; align-items: center;}
+    
+.imagemSobreNós{width: 100%; background-color: ; margin-top: 20px;}
+    
+.parágrafo{background-color: ; width: 90%; display: flex; flex-direction: column;
+margin-top: 20px; margin-right: }
+    
 
 
 
