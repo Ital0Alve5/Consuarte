@@ -93,6 +93,7 @@ imagensDaGaleria.forEach(foto => {foto.addEventListener('click', qualFoto)}) //p
 botões.forEach(botão => {botão.addEventListener('click', next)}) //para cada botão virtual clicado, chamar a função "next"
 window.onkeydown = next //para cada tecla pressionada, chamar a função next
 var indice; //declaração da variável global "indice"
+
 function qualFoto(){ 
     source = this.getAttribute('src') //esta função puxa a src específica da foto que foi clicada
     indice = fotosDaGaleria.indexOf(source) //E procura o índice da src no array, retornando seu valor
