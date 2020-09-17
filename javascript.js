@@ -25,7 +25,7 @@ function ScrollToId(event){ //O parâmetro nos mostra que houve um evento de mou
     //previne que o html coloque o valor do href na URL e bloqueia que a página vá para a seção com o id que está no href    
     var checkbox = document.getElementById('barraMenu') //Pegar o checkbox do botão de menu na versão mobile    
     checkbox.checked = false //Sempre que, na versão mobile, uma opção for clicada, o checkbox é desmarcado e o menu sobe automaticamente    
-    document.getElementById('icone').src = "iconeMenu.png" //Ao clicar em alguma opção de navegação do menu mobile, o ícone de menu que está um "X", volta a ser 3 barras horizontais
+    document.getElementById('icone').src = "img/iconeMenu.png" //Ao clicar em alguma opção de navegação do menu mobile, o ícone de menu que está um "X", volta a ser 3 barras horizontais
     const items = event.target //especifica um dos métodos que quero utilizar no evento de mouse. Este método mostra qual foi o elemento html que foi clicado    
     const id = items.getAttribute('href') //Estou pegando o valor do atributo href , que é um id, do elemento que  foi clicado e colocando na constante "id" para colocar o id dos elementos como parâmetro    
     const section = document.querySelector(id).offsetTop //Como disse acima, estou colocando o valor do href, que é um id, como parâmetro para que o query peque a section com o id específico.
@@ -41,10 +41,10 @@ window.onload = function(){MudarLogo()}
 function MudarLogo(){
     var barraFixa = document.querySelector('.barraFixa')
     if(window.innerWidth < 700){
-        document.getElementById('logo').src = 'logo1.png'
+        document.getElementById('logo').src = 'img/logo1.png'
         barraFixa.style.display = 'none' //A barra de navegação na versão mobile não aciona sozinha ao redimensionar a tela
     }
-    else{document.getElementById('logo').src = 'logo.png'
+    else{document.getElementById('logo').src = 'img/logo.png'
         if(document.getElementById('menu').getBoundingClientRect().top <= -105){ //evita que a barra de navegação esteja visível se a página carregar
             barraFixa.style.display = 'flex' //A barra de navgeação fixa da versão desktop não desaparece ao redimensionar a tela
             barraFixa.style.position = 'fixed'
@@ -63,9 +63,9 @@ function mudarIcone(){
     var menu = document.getElementById('barraMenu')
     var icone = document.getElementById('icone')
     if(menu.checked){
-        icone.src = "iconeMenu.png"
+        icone.src = "img/iconeMenu.png"
     }
-    else{icone.src = "iconeFechar.png"}
+    else{icone.src = "img/iconeFechar.png"}
 }
 
 /*-----------------------------------SETA IMAGEM PRO MODAL AO CLICAR--------------------------------------------------------------------------------------------------------*/
