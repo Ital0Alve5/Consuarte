@@ -7,6 +7,7 @@
 label{display: none;}
 input{display: none;}
 #ConsuArte{display: none}
+.subtópicoMobile{display: none}
 
 #navegação{background-color:; position: absolute; width: 100%}
 
@@ -16,7 +17,7 @@ align-items: center; font-size: larger; height: 105px;}
 .item{background-color:s; width: 15%; height: 50px;
 display: flex; justify-content: center; align-items: center;}
 
-.item:hover{background-color:  rgb(255,215,200, .5); border-radius: 8px;}
+.item:hover{border-radius: 8px;font-size: 21px; color: rgb(30, 30, 30); transition: all 0.3s}
 
 #logo{background-color: ; float: left; width: 150px; margin-left: 50px;}
 
@@ -25,12 +26,28 @@ display: flex; width: 100%; height: 50px;display: none;}
 
 #navegação{display: block;}
 
+.tópicoContato:hover{background-color: rgb(117, 52, 121, 0.7);}
+.tópicoParcerias:hover{background-color: rgb(220, 23, 222, 0.5);}
+.tópicoServiços:hover{background-color: rgb(35, 143, 134, 0.5);}
+.tópicoGaleria:hover{background-color: rgb(50, 252, 235, 0.5);}
+.tópicoSobrenós:hover{background-color: rgb(233, 160, 34, 0.8);}
+.tópicoInício:hover{background-color: rgb(172, 67, 50, 0.8);}
+
 /*---------------------------------------INÍCIO---------------------------------------------*/
 
+#PáginaInicial{height: 100vh; width: 100%; background-color: white;}
 
+.containersubtópicos{background-color: yellow; width: 20%; position: absolute;
+top: 77px; right: 25%; display: none;}
+.subtópicos{background-color: rgb(35, 143, 134); display: flex; width: 100%; flex-direction: column;}
+.subtópico{padding: 20px;}
+.subtópico:hover{background-color:  rgb(78, 202, 192); font-size: 17px;}
 
-#PáginaInicial{height: 100vh; width: 100%; background-color: lawngreen;}
-
+.containersubtópicosFixo{background-color: yellow; width: 20%; position: fixed;
+top: 77px; right: 25%; display: none;}
+.subtópicosFixo{background-color: rgb(35, 143, 134); display: flex; width: 100%; flex-direction: column;}
+.subtópicoFixo{padding: 20px;}
+.subtópicoFixo:hover{background-color:  rgb(78, 202, 192); font-size: 17px;}
 
 /*---------------------------------------SOBRE NÓS---------------------------------------------*/
 
@@ -96,20 +113,27 @@ right: 0; cursor: pointer; z-index: 700;}
 /*---------------------------------------MENU---------------------------------------------*/
 
 .barraFixa{display: none}
-
+.containerSubMobile{width: 100vw; flex-direction: column; align-items: center;  display: none;}
+.subtópicoMobile{display: flex; font-size: 17px; width: 100%;
+justify-content: center; align-items: center; padding-top: 7px; background-color: teal;}
 #menu{background-color:; display: block; position: absolute;}
 
 .items{width: 100vw; background-color:; display: flex;
 flex-direction: column; justify-content: space-around; align-items: center;
-height: 250px; position: fixed; top: -250px; transition: all .3s;}
+height: 350px; position: fixed; top: -350px; transition: all .3s;}
 
-.item{background-color: rgba(200, 200, 200, 0.9); width: 100%; height: 100%; display: flex;
+.item{background-color: rgb(106, 255, 68); width: 100%; height: 100%; display: flex;
 justify-content: center; align-items: center; align-content: space-around;
 font-size: 17px; z-index: 2;}
 
-#barraMenu:checked ~ .items{transform: translateY(250px);}
-
-.item:hover{background-color:rgb(250,250,250); border-radius: 0px;}
+#barraMenu:checked ~ .items{transform: translateY(350px);}
+.item:hover{border-radius: 0px;}
+.tópicoContato:hover{background-color: rgb(117, 52, 121);}
+.tópicoParcerias:hover{background-color: rgb(220, 23, 222);}
+.tópicoServiços:hover{background-color: rgb(35, 143, 134);}
+.tópicoGaleria:hover{background-color: rgb(50, 252, 235);}
+.tópicoSobrenós:hover{background-color: rgb(233, 160, 34);}
+.tópicoInício:hover{background-color: rgb(172, 67, 50);}
 
 #icone{width: 25px; background-color: ;}
 
@@ -131,8 +155,8 @@ display: flex; position: fixed; justify-content: center; align-items: center; ov
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
 
 /*----------------------------------------INÍCIO--------------------------------------------------*/
-
-
+.subtópicoMobile{padding: 10px}
+.subtópicoMobile:hover{background-color: rgb(78, 202, 192);}
 
 
 

@@ -17,24 +17,47 @@
     <input type="checkbox" id="barraMenu">
     <label for="barraMenu" id="iconeLabel" onclick="mudarIcone()"><img src="img/iconeMenu.png" id="icone"></i></label>
         <li class="items">
-            <a href="#navegação" class="item">Início</a>
-            <a href="#Sobrenos" class="item">Sobre nós</a>
-            <a href="#Galeria" class="item">Galeria</a>
-            <a href="#Serviços" class="item">Serviços</a>            
-            <a href="#Parcerias" class="item">Parcerias</a>
-            <a href="#Contato" class="item">Contato</a>
+            <a href="#navegação" class="item tópicoInício">Início</a>
+            <a href="#Sobrenos" class="item tópicoSobrenós">Sobre nós</a>
+            <a href="#Galeria" class="item tópicoGaleria">Galeria</a>
+            <a href="#Serviços" class="item tópicoServiços" onclick="displayMobile()" onmouseover="display()" onmouseout="hide()">Serviços <i class="fas fa-caret-down"></i></a>            
+            <div class="containerSubMobile">
+            <a href="#" class="subtópicoMobile">Teatro treinamento</a>
+            <a href="#" class="subtópicoMobile">Gestão de projetos</a>
+            <a href="#" class="subtópicoMobile">Campanhas institucionais</a>
+            <a href="#" class="subtópicoMobile">Treinamentos corporativos</a>
+            </div>
+            <a href="#Parcerias" class="item tópicoParcerias">Parcerias</a>
+            <a href="#Contato" class="item tópicoContato">Contato</a>
         </li>
         <li class="items barraFixa">
-            <a href="#navegação" class="item">Início</a>
-            <a href="#Sobrenos" class="item">Sobre nós</a>
-            <a href="#Galeria" class="item">Galeria</a>
-            <a href="#Serviços" class="item">Serviços</a>            
-            <a href="#Parcerias" class="item">Parcerias</a>
-            <a href="#Contato" class="item">Contato</a>
+            <a href="#navegação" class="item tópicoInício">Início</a>
+            <a href="#Sobrenos" class="item tópicoSobrenós">Sobre nós</a>
+            <a href="#Galeria" class="item tópicoGaleria">Galeria</a>
+            <a href="#Serviços" class="item tópicoServiços" onmouseover="displayFixo()" onmouseout="hide()">Serviços <i class="fas fa-caret-down"></i></a>        
+            <a href="#Parcerias" class="item tópicoParcerias">Parcerias</a>
+            <a href="#Contato" class="item tópicoContato">Contato</a>
         </li>
     </nav>
     </div>
     <section id="PáginaInicial">
+        
+        <div class="containersubtópicos" onmouseover="display()" onmouseout="hide()">
+            <li class="subtópicos">
+                <a href="#" class="subtópico">Teatro treinamento</a>
+                <a href="#" class="subtópico">Gestão de projetos</a>
+                <a href="#" class="subtópico">Campanhas institucionais</a>
+                <a href="#" class="subtópico">Treinamentos corporativos</a>
+            </li>
+        </div>
+        <div class="containersubtópicosFixo" onmouseover="displayFixo()" onmouseout="hide()">
+            <li class="subtópicosFixo">
+                <a href="#" class="subtópicoFixo">Teatro treinamento</a>
+                <a href="#" class="subtópicoFixo">Gestão de projetos</a>
+                <a href="#" class="subtópicoFixo">Campanhas institucionais</a>
+                <a href="#" class="subtópicoFixo">Treinamentos corporativos</a>
+            </li>
+        </div>
     </section>
 
     <section id="Sobrenos">
